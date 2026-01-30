@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "lol-flash-timer",
   "version": "1.0.0",
   "description": "League of Legends Flash Timer with Team Sync",
@@ -52,7 +52,10 @@
         }
       ],
       "icon": "icon.png",
-      "category": "public.app-category.games"
+      "category": "public.app-category.games",
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
     },
     "nsis": {
       "oneClick": false,
