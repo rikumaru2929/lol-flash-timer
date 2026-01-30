@@ -1,0 +1,71 @@
+{
+  "name": "lol-flash-timer",
+  "version": "1.0.0",
+  "description": "League of Legends Flash Timer with Team Sync",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
+  },
+  "keywords": ["lol", "league of legends", "timer"],
+  "author": "加藤",
+  "license": "MIT",
+  "build": {
+    "appId": "com.lol.flashtimer",
+    "productName": "LoL Flash Timer",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "firebase.js",
+      "index.html",
+      "overlay.html",
+      "renderer.js",
+      "overlay.js",
+      "styles.css",
+      "icon.png",
+      "icon.ico",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "icon.png",
+      "category": "public.app-category.games"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "firebase": "^10.7.0"
+  }
+}

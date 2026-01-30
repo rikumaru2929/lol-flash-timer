@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html style="margin:0;padding:0;overflow:hidden;">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      user-select: none;
+      border-radius: 3px;
+      cursor: move;
+      -webkit-app-region: drag;
+      padding: 2px 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .timer-row {
+      display: flex;
+      gap: 5px;
+      line-height: 1.1;
+    }
+
+    .role {
+      font-weight: bold;
+      font-size: 10px;
+      color: #F44336;
+      width: 24px;
+    }
+
+    .status {
+      font-weight: bold;
+      font-size: 10px;
+    }
+
+    .ready {
+      color: #4CAF50;
+    }
+
+    .cooldown {
+      color: #F44336;
+    }
+
+    .soon {
+      color: #FFC107;
+    }
+  </style>
+</head>
+<body>
+  <div class="timer-row">
+    <span class="role">Top</span>
+    <span class="status ready" id="enemy_top">OK ✅</span>
+  </div>
+  <div class="timer-row">
+    <span class="role">JG</span>
+    <span class="status ready" id="enemy_jungle">OK ✅</span>
+  </div>
+  <div class="timer-row">
+    <span class="role">Mid</span>
+    <span class="status ready" id="enemy_mid">OK ✅</span>
+  </div>
+  <div class="timer-row">
+    <span class="role">ADC</span>
+    <span class="status ready" id="enemy_adc">OK ✅</span>
+  </div>
+  <div class="timer-row">
+    <span class="role">Sup</span>
+    <span class="status ready" id="enemy_support">OK ✅</span>
+  </div>
+
+  <script src="overlay.js"></script>
+</body>
+</html>
